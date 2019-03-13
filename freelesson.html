@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Recommendations</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<!--
+		Author: Eric Worden
+		Project: CIS155 Project V3
+		Date: 2/19/2019
+		Purpose: This page is to list a series of tables to have base drumkits for the user to choose from if they are looking to start out. There will be advanced kits for those who are more comfortable with thier skills and are looking to upgrade.
+		
+		This page has: 
+		M7LO5 Demonstrate the use of a text box in a form
+		M7LO8 Demonstrate the use of a selection list in a form
+		M7LO9 Demonstrate the use of a text area in a form
+		M7LO10 Demonstrate the use of a submit button in a form
+		
+	-->
+</head>
+
+<body>
+	
+	<header>
+		<div class="banner"><img src="banner.png" alt="Webpage Banner" usemap="#my-map" />
+																		<map name="my-map">
+																			<area alt="Send_Me-Home" title="Home Page" href="index.html" coords="334,79,71" shape="circle">
+																		</map>
+		</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="history.html">History</a></li>
+					<li><a href="manu.html">Drumkits</a></li>
+					<li><a href="company.html">Manufacturers</a></li>
+					<li><a href="freelesson.html">Email Lessons</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+	</header><br />
+			
+	<h1>Free Lessons</h1>
+		<p>
+			For a guideline on what to work on, please fill out the form below to receive free emailed lessons.
+		</p>
+		
+	<!--
+		M7LO5 Demonstrate the use of a text box in a form
+		M7LO8 Demonstrate the use of a selection list in a form
+		M7LO9 Demonstrate the use of a text area in a form
+		M7LO10 Demonstrate the use of a submit button in a form
+			
+			Below I created a web form that I will one day apply a php code to help create an email list and based on the decision that are chosen by the user, they would receive an email that tells them what to work on for the week.
+	-->
+	
+	<h1>Email Form</h1>
+		<form class="center">
+			<label for="firstname">First name:</label>
+				<input type="text" name="firstname"><br />
+			<label for="lastname">Last name:</label>
+				<input type="text" name="lastname"><br />
+			<label for="mailaddress">Email Address:</label>
+				<input type="text" name="mailaddress"><br />
+			<label for="level" style="float: center;">Drum Level:</label><br />
+					<select name="level">
+						<option value="beginner">Beginner</option>
+						<option value="advanced">Advanced</option>
+					</select><br />
+			<label for="learn">What would you like learn:</label><br />
+				<textarea name="learn" rows="10" cols="20">
+					Concepts, Coordination, Speed, Technique, ect...
+				</textarea>
+				<br /><button>Submit</button>
+		</form>
+		
+	<footer>
+			<ul>
+				<li>Site Design/Logo by: <a href="mailto:ericworden@student.olympic.edu">Eric Worden</a>.</li>
+				<li>This site is for the academic purposes of Olympic College's CIS155 W19 class.</li>
+			</ul>
+	</footer><br />
+</body>
+</html>

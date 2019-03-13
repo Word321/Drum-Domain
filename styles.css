@@ -1,0 +1,400 @@
+@charset "utf-8";
+
+	/*
+		Author: Eric Worden
+		Project: CIS155 Project V3
+		Date: 2/19/2019
+			Purpose: This is the CSS file that will set the designing and styles of the webpage.
+			
+			This page has:
+			M5LO4 Use CSS for pull down menus (CSS)
+			M5LO3 Use media queries to format a page differently for phones vs. PCs
+			M5LO7 Demonstrate use of properties of flexbox containers
+			M5LO6 Demonstrate use of properties of flexbox items
+			M6LO7 Demonstrate how to format a table with CSS
+			M7LO11 Demonstrate how to format a form with CSS
+	*/
+
+	/*
+		Body and HTML Formatting
+	*/
+
+html {
+	background-color:#ccc;
+}
+
+body {
+	  margin:0;
+      padding:0;
+	  width:100%;
+	  font-family:"Trebuchet MS", Helvetica, sans-serif;
+	  color:hsla(240, 80%, 20%, 0.8);
+}
+
+	/*
+		Navigation Bar Formatting
+	*/
+
+nav {
+	font-family:sans-serif;
+	background:black;
+	width:100%;
+	float:left;
+	position:fixed;
+	bottom:0;
+}
+
+nav ul {
+	list-style:none;
+	margin:0 auto;
+	padding:0px;
+	width:675px;
+}
+
+nav li {
+	display: block;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	float:left;
+	font-weight:bold;
+	text-align:center;
+}
+
+nav a {
+	display:block;
+	padding:15px 17px;
+	overflow: hidden;
+	text-decoration:none;
+	background-color:black;
+	color:white;
+}
+
+nav ul li a:hover {
+	background-color:gray;
+	color:black;
+}
+
+.banner {
+	background-color:black;
+	margin:0 auto;
+	text-align:center;
+}
+	/*
+		Paragraph Formatting
+	*/
+
+h1 {
+	width:75%;
+	margin:25px auto;
+	font-size:2em;
+	text-align:center;
+	background-color:gray;
+	color:white;
+	clear:both;
+}
+
+p {
+	box-sizing:border-box;
+	border:solid 2px black;
+	background:white;
+	width:75%;
+	margin: auto;
+	padding: 25px;
+}
+
+p a {
+	color:green;
+}
+
+p::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+ul {
+	list-style:none;
+}
+
+figure {
+	float: left;
+	width: 20%;
+	text-align: center;
+	font-style: italic;
+	font-size: smaller;
+	text-indent: 0;
+	border: thin black solid;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.clear {
+	clear:both;
+}
+
+.timeline {
+	position: absolute;
+	width: 325px;
+	height: 100px;
+	left: 370px;
+	top: 720px;
+}
+
+.content-box-olist {
+	margin-top:50px;
+	margin-left:100px;
+	margin-right:100px;
+	overflow: hidden;
+	padding:30px;
+	background-color:white;
+	color:inherit;
+	list-style-position:inside;
+	text-align:center;
+}
+
+.content-box-ulist {
+	margin-top:50px;
+	margin-left:100px;
+	margin-right:100px;
+	overflow: hidden;
+	padding:30px;
+	background-color:white;
+	color:inherit;
+	list-style-position:inside;
+	text-align:center;
+}
+
+#impact {
+	margin: auto;
+	color:inherit;
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+#grad {
+	background-image: -webkit-gradient(white, gray, black);
+	background-image: linear-gradient(white, gray, black);
+}
+
+.oval {
+  height: 200px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+	/*
+		Drop Menu Formatting
+		
+		M5LO4 Use CSS for pull down menus (CSS)
+		Below are classes I used with the div element to create a pulldown menu button for my tutorials. I had to use absolute positioning because of the way my content boxes are created while writing paragraphs.
+	*/
+	
+.dropbtn {
+  background-color: teal;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px;
+  border-color: white;
+  cursor: pointer;
+}
+
+.dropdown1 {
+	position: absolute;
+	left: 265px;
+	top: 1550px;
+	display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown1:hover .dropbtn {
+  background-color: black;
+}
+
+	/*
+		Table Formatting
+			M6LO7 Demonstrate how to format a table with CSS
+				Below is the table used on the manu.html page. The look is inspired by the case problem used last week. The background for the table is a gradient look with a gray border for emphasis on the background and the rest of the table. The table headers have a solid black background to look different from the table data elements. I also added a class to center the tables on the screen.
+	*/
+table {
+	background: linear-gradient(to top right, white, black);
+	border: 5px solid gray;
+}
+
+table th, table td {
+	border: 3px solid gray;
+	line-height: 1.4em;
+	padding: 5px;
+}
+
+table th {
+	background-color: black ;
+	color: white;
+	font-weight: bold;
+}
+
+table td {
+	color: black;
+	font-size: 0.8em;
+	vertical-align: text-top;
+	font-weight: bold;
+}
+
+.tableposition {
+	margin: auto;
+}
+
+	/*
+		Collage Flexbox
+		
+			M5LO3 Use media queries to format a page differently for phones vs. PCs
+				I used the media queries below to change the way the flex box shows the images. For mobile phones I changed the column image size to be on one row, for tablets/small resolution screens it shows up as two rows, and for the default/large resolution monitors, the images show up as three columns.
+				
+			M5LO5 Demonstrate the use of flexboxes on a web page
+				I used the flex box below to create a collage of images for the user to click upon to bring them to a home page of the drum manufacturer of their choice.
+				
+			M5LO7 Demonstrate use of properties of flexbox containers
+				In the .flexrow class I used the flex-wrap property so that the images displayed in the row will wrap to the next row if necessary.
+				
+			M5LO6 Demonstrate use of properties of flexbox items
+				The .flexcolumn class aligns the items, or in this case, the images to align them  vertically centered to each other. This makes the images more presentable and easy to look at. I also created a :hover property to make the images display a lighter gray color when hovering over them so the user knows what image/link they are about to click on.
+	*/
+	
+@media only screen and (max-width: 600px) {
+  .flexcolumn {
+    flex: 100%;
+    max-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+  .flexcolumn {
+    flex: 50%;
+    max-width: 50%;
+	padding: 0 1px
+	}
+}
+	
+@media only screen and (min-width: 768px) {
+.flexcolumn {
+	flex: 33%;
+	max-width: 33%;
+	padding: 0 2px;
+	}
+}
+
+.flexrow {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 2px;
+	background-color: white;
+}
+
+.flexcolumn img {
+	margin-top: 3px;
+	vertical-align: middle;
+	display: block;
+	background-color: grey;
+}
+
+.flexcolumn img:hover {
+	opacity: .8;
+}
+
+	/*
+		Web Form Formatting
+	*/
+		/*
+			M7LO11 Demonstrate how to format a form with CSS
+				Below I grouped all of the web forms styling. I started by creating a background/border for the entire form to give it more of an appeal to the user. Each input for the form has increased padding, width, and space between each input for those who may have a hard time reading what they have input. I changed the color and padding of the submit button for a design with the rest of the website, including a chnage of color when hovered over. After doing all of this I noticed that my text wouldn't line up properly with each other, so I added label text aligns and padding.
+				
+			M8LO10 Demonstrate a CSS animation or transition
+				Created a CSS transition when clicking the web form submit button to cause it to jump down 5 px.
+		*/
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1.5rem 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+}
+
+form input {
+	margin-bottom: 1rem;
+	background: #fff;
+	border: 1px solid #9c9c9c;
+}
+
+form button {
+  background: lightgrey;
+  padding: 1em;
+  border: 0;
+  transition: all .1s linear;
+}
+
+form button:hover {
+  background: teal;
+}
+
+form button:active {
+	box-shadow: 0 2px 0 #006599;
+	transform: translateY(5px);
+}
+
+label {
+  text-align: left;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+
+input {
+	width: 100%;
+	padding: 0.7em;
+	margin-bottom: 0.5rem;
+}
+
+select {
+	padding: 0.7em;
+	float: center;
+}
+
+	/*
+		Footer Formatting
+	*/
+	
+footer {
+	clear:both;
+	margin:50px 100px;
+	text-align:center;
+	color:black;
+}
